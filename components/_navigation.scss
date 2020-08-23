@@ -1,0 +1,143 @@
+.menu {
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    z-index: 2;
+    // border-radius: 100%;
+    height: 3.5rem;
+    width: 3.5rem;
+    transition: all .4s ease;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-28%, -33%);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
+.bar-1, .bar-2, .bar-3 {
+    display: block;
+    width: 3.5rem;
+    height: 3px;
+    background-color: #000;
+    margin: 7px 0;
+    transition: all .4s ease;
+    padding: 0;
+    border-radius: 3px;   
+}
+
+.bar-3 {
+    width: 2rem;
+}
+
+.change .bar-1 {
+    transform: translateY(0.5px) rotateZ(45deg);
+    background-color: #333;
+    
+}
+
+.change .bar-3 {
+    transform: translateY(-9.5px) rotateZ(-45deg);
+    background-color: #333;
+    width: 3.5rem;
+
+}
+
+.light-border {
+    border-color: #fff;
+}
+
+.navigation {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    transform: translateX(100vw);
+    opacity: 0;
+    display: flex;
+    color: #fff;
+    transition: all .4s ease-in-out;
+}
+
+
+.left, .right {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    
+}
+
+.left{
+    background: inherit;
+}
+
+.right{
+    // background: #333;
+    right: 0;
+    display: flex;
+    align-items: center; 
+    
+}
+
+.nav-item {
+    margin-bottom: 3rem;
+    opacity: 0;
+    // animation: .4s slideIn ease;
+    
+}
+
+.nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 1px;
+    color: #333;
+    text-transform: lowercase;
+    display: inline-block;
+    transition: .3s;
+
+    &::after {
+        content: '';
+        display: block;
+        margin-top: 1rem;
+        width: 3rem;
+        border: solid 1px red;
+        height: 1px;
+        transition: .4s;
+    }
+
+    &:hover::after {
+        width: 20rem;
+    }
+
+    &:hover {
+        color: red;
+    }
+
+    &-1 {
+        transform: translateX(10rem);
+    }
+
+    &-2 {
+        transform: translateX(30rem);
+    }
+
+    &-3 {
+        transform: translateX(10rem);
+    }
+
+    &-4 {
+        transform: translateX(30rem);
+    }
+}
+
+
+
+
+.show {
+    transform: translateX(0);
+    opacity: 1;
+}
